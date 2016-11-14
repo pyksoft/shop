@@ -1,8 +1,9 @@
+
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
         <th class="text-left"><%= sort_link "name" %></th>
-        <th class="text-left"><%= sort_link "price" %></th>
+        <th class="text-left"><%= "price" %></th>
         <th class="text-left"><strong>photo:</strong></th>
       </tr>
     </thead>
@@ -10,12 +11,10 @@
       <% @products.each do |product| %>
       <tr>
         <td><%= link_to product.name, product_path(product.id) %> </td>
-        <td><ul>
-          <% @products.each do |product| %>
-          <li><%= product.name %> </li>
-          <% end %> </ul></td>
-          <!-- <% artist.photos.each do |photo| %>
-          <td><%= image_tag photo.image_url %> </td> -->
+        <td> <%= product.price %>  </td>
+
+          <% product.photos.each do |photo| %>
+          <td><%= image_tag photo.image %> </td>
       </tr>
 
     <% end %>

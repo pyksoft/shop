@@ -1,6 +1,16 @@
 <h1>Overview of Products</h1>
 
-<BR>
-<%= render(
-    partial: 'products/list',
-  ) %>
+
+  <%= form_tag products_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <% end %>
+
+
+<% if @products.present? %>
+  <%= render( partial: 'products/list',) %>
+<% else %>
+  <p>There are no products containing the term(s) <%= params[:search] %>.</p>
+<% end %>
