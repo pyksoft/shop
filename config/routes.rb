@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :profiles, only: [:new, :edit, :create, :update]
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
+  resources :charges
 
   root to: "products#index"
 
