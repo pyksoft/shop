@@ -1,10 +1,13 @@
 class CartsController < ApplicationController
+before_action :authenticate_user!, except: [:show]
+
   def show
     @order_items = current_order.order_items
   end
 
   def add_item(product_id)
     item = items.where('product_id = ?', product_id).first
+
     if item
       # increase the quantity of product in cart
       item.quantity + 1

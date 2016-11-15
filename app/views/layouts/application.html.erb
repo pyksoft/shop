@@ -2,31 +2,27 @@
 <html>
   <head>
     <title>Australianstore</title>
-
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
     <%= csrf_meta_tags %>
-
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
-    <%= render 'layouts/cart_text' %>
+    <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-  </body>
-</html>
 
-<script>
-  // A $( document ).ready() block.
-  $( document ).ready(function() {
-    $( '.trigger' ).click(function() {
-      $( ".highlight" ).toggle( "highlight" );
+
+  <script>
+    // A $( document ).ready() block.
+    $( document ).ready(function() {
+      $( '.trigger' ).click(function() {
+        $( ".highlight" ).toggle( "highlight" );
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>

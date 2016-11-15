@@ -9,6 +9,7 @@ class Order < ApplicationRecord
   def subtotal
     order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price.to_f) : 0 }.sum
   end
+  
 private
   def set_order_status
     self.order_status_id = 1
