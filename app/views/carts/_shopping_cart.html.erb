@@ -2,6 +2,15 @@
   <h4><%="Subtotal: #{number_to_currency current_order.subtotal}" %></h4>
 </div>
 
+<div>
+  <div class="require profile">
+    <form action="charges/new.html">
+      <input class="btn btn-default" type="submit" value="Confirm and pay your order"/>
+    </form>
+  </div>
+</div>
+
+<br>
 
 <% if !@order_item.nil? && @order_item.errors.any? %>
     <div class="alert alert-danger">
