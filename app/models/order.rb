@@ -9,15 +9,15 @@ class Order < ApplicationRecord
   end
 
   def shipping
-    subtotal * 0.15
+    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price * 0.15).round(2) : 0 }.sum
   end
 
   def tax
-    subtotal * 0.21
+    (subtotal * 0.21).round(2)
   end
 
   def total
-    subtotal + tax + shipping
+    (subtotal + tax + shipping).round(2)
   end
 
 

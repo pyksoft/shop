@@ -1,0 +1,17 @@
+<h1> orders </h1>
+
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <th class="text-left"><%= "id" %></th>
+    <th class="text-left"><%= "total amount" %></th>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+          <td><%= order.id %>
+          <td><%= order.total %>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
