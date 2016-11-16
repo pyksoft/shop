@@ -17,7 +17,7 @@ product4 = Product.create(name:"Vegemite", price: "8.99", photos: [photo4])
 product5 = Product.create(name:"Milo", price: "19.99", photos: [photo5])
 product6 = Product.create(name:"Frozen Kangaroo Steak", price: "21.99", photos: [photo6])
 
-OrderStatus.create! id: 1, name: "In Progress"
-OrderStatus.create! id: 2, name: "Placed"
-OrderStatus.create! id: 3, name: "Shipped"
-OrderStatus.create! id: 4, name: "Cancelled"
+OrderStatus.create! name: "In Progress"
+OrderStatus.create! name: "Placed"
+OrderStatus.create! name: "Shipped"
+OrderStatus.create! name: "Cancelled"
