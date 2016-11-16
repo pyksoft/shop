@@ -375,7 +375,7 @@
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_AWVRdlM1LHBiV2UOyLT0bFyA"
-    data-amount="500"
+    data-amount="<%= current_order.subtotal * 1.15 %>"
     data-name="Australianproducts"
     data-description="2 widgets"
     data-image="http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479297450/flag-round-250_uodave.png"
