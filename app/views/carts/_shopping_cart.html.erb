@@ -3,15 +3,15 @@
 </div>
 
 <div>
-  <div class="require profile">
+  <div class="confirmbutton">
     <form action="charges/new.html">
-      <input class="btn btn-default" type="submit" value="Confirm and pay your order"/>
+      <input class="btn btn-default", id=confirmbutton, type="submit" value="Confirm and pay your order"/>
     </form>
   </div>
 </div>
 
 <br>
-
+<div class="orderitemrow">
 <% if !@order_item.nil? && @order_item.errors.any? %>
     <div class="alert alert-danger">
       <ul>
@@ -28,3 +28,4 @@
 <% else %>
         <%= render 'carts/cart_row' %>
 <% end %>
+</div>

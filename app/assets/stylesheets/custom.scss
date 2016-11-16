@@ -4,6 +4,7 @@ img  {
 
 .table-bordered {
   width: 700px;
+  align-items: center;
 }
 
 .searchbar {
@@ -12,4 +13,23 @@ img  {
 
 .homepageheader {
   text-align: center;
+}
+
+.cartbutton {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+.confirmbutton {
+  text-align: center;
+}
+
+.orderitemrow {                                                                                                                                                            ;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
 }
