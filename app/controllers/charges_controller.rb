@@ -6,8 +6,13 @@ class ChargesController < ApplicationController
   end
 
   def create
+    @order = Order.create(current_order)
+    @order_items = @order.order_items.build(current_order.order_items)
+
+    debugger
+
+    @amount = @order.total
     # Amount in cents
-    @amount = 500
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
