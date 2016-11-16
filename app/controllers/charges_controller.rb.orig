@@ -6,7 +6,15 @@ class ChargesController < ApplicationController
   end
 
   def create
+<<<<<<< HEAD
     @amount = (current_order.total * 100).to_i
+=======
+    @order = Order.create(current_order)
+    @order_items = @order.order_items.build(current_order.order_items)
+    @order.save
+
+    @amount = @order.total
+>>>>>>> master
     # Amount in cents
 
     customer = Stripe::Customer.create(

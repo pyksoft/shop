@@ -1,0 +1,17 @@
+<h1> orders </h1>
+
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <th class="text-left"><%= "Created at" %></th>
+    <th class="text-left"><%= "total amount" %></th>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+          <td><%= order.created_at %> </td>
+          <td><%= "€ #{order.total}" %> </td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
