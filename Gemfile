@@ -56,3 +56,4 @@ gem 'devise'
 gem 'stripe'
 gem 'haml-rails'
 gem 'rails_12factor', group: :production
+gem 'jquery-turbolinks'
