@@ -1,3 +1,4 @@
+<div class="productoverview">
 <h1 class="page-title">Overview of products:</h1>
 <div class="row">
   <div class="col-md-6">
@@ -51,8 +52,10 @@
     </div>
   </div>
 </div>
+
 <BR>
 
+<div class="paybutton">
 <%= form_tag charges_path do %>
   <article>
     <% if flash[:error].present? %>
@@ -62,19 +65,20 @@
     <% end %>
   </article>
 
-
 <form action="/your-server-side-code" method="POST">
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="pk_test_AWVRdlM1LHBiV2UOyLT0bFyA"
-  data-panel-label="<%="Total price: #{number_to_currency current_order.subtotal * 1.15}" %>"
-  data-name="Demo Site"
+  data-amount="500"
+  data-name="Australianproducts"
   data-description="2 widgets"
-  data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+  data-image="http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479297450/flag-round-250_uodave.png"
   data-locale="auto"
   data-zip-code="true"
   data-currency="eur">
 </script>
 </form>
+</div>
 
 <% end %>
+</div>

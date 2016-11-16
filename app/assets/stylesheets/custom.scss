@@ -25,11 +25,17 @@ img  {
   text-align: center;
 }
 
-.orderitemrow {                                                                                                                                                            ;
+.orderitemrow {                                                                                                                                                         ;
   width: 300px;
   height: 200px;
   z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -100px 0 0 -150px;
+  margin: 0px 0 0 250px;
+}
+
+.productoverview {
+  margin: 0px 0 0 450px;
+}
+
+.paybutton {
+  margin: 0px 0 0 150px;
 }
