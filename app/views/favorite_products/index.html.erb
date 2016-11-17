@@ -1,3 +1,36 @@
-<h1> Products </p>
-<% @products.each do |product| %>
-    <p> link_to product.name, product_path(product.id) </p>
+
+<h1 class="homepageheader">Wishlist</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+          <th class="text-left"><%= "name" %></th>
+          <th class="text-left"><%= "price" %></th>
+          <th class="text-left">
+              <strong>photo:</strong>
+          </th>
+          <th class="text-left"><%= "Remove from wishlist" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+      <tr>
+          <td><%= link_to product.name, product_path(product.id) %>
+          </td>
+          <td>
+              <%= product.price %>
+          </td>
+          <% product.photos.each do |photo| %>
+          <td><%= image_tag photo.image %>
+          </td>
+
+
+  <td>
+    <%= link_to 'Remove from favorites', favorite_product_path(product.id), method: :delete %>
+
+  </td>
+      </tr>
+        <% end %>
+        <% end %>
+    </tbody>
+</table>
