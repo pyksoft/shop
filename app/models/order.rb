@@ -1,15 +1,16 @@
 class Order < ApplicationRecord
   # belongs_to :order_status
   has_one :cart
+  has_many :order_items
   before_validation :set_order_status
   before_save :update_subtotal, :update_tax, :update_shipping, :update_total
 
   def subtotal
-    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price.to_f) : 0 }.sum
+    order_items.collect { |oi| (oi.quantity.to_i * oi.unit_price.to_f)}.sum
   end
 
   def shipping
-    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price * 0.15).round(2) : 0 }.sum
+    order_items.collect { |oi| (oi.quantity.to_i * oi.unit_price * 0.15).round(2) }.sum
   end
 
   def tax
@@ -17,7 +18,7 @@ class Order < ApplicationRecord
   end
 
   def total
-    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price * 1.15 * 1.21).round(0) : 0 }.sum
+    order_items.collect { |oi| (oi.quantity.to_i * oi.unit_price * 1.15 * 1.21).round(0) }.sum
   end
 
 

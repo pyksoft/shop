@@ -6,6 +6,10 @@ class ChargesController < ApplicationController
   end
 
   def create
+    @order = Order.new(params[:order])
+
+    if @order.save
+
     @amount = (current_cart.total * 100).to_i
     # Amount in cents
 
@@ -21,8 +25,17 @@ class ChargesController < ApplicationController
       :currency    => 'eur'
     )
 
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to new_charge_path
+
+  else
+    flash[:notice] = "order could not be created"
     end
   end
+
+
+private
+
+  def order_params
+    params.require(:order).permit(:title, :subtotal, :tax, :shipping, :total)
+  end
+
+end

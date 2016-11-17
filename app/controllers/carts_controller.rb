@@ -24,4 +24,6 @@ before_action :authenticate_user!, except: [:show]
     # redirect to shopping cart or whereever
   end
 
+
+
 end
