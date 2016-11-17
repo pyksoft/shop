@@ -1,8 +1,7 @@
-class Order < ApplicationRecord
-  # belongs_to :order_status
-  has_one :cart
-  before_validation :set_order_status
+class Cart < ApplicationRecord
+  has_many :order_items
   before_save :update_subtotal, :update_tax, :update_shipping, :update_total
+  belongs_to :order
 
   def subtotal
     order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price.to_f) : 0 }.sum
@@ -29,7 +28,7 @@ class Order < ApplicationRecord
     end
   end
 
-private
+  private
   def set_order_status
     self.order_status_id = 1
   end

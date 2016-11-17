@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  helper_method :current_order
+  helper_method :current_cart
 
-  def current_order
-    if !session[:order_id].nil?
-      Order.find(session[:order_id])
+  def current_cart
+    if !session[:cart_id].nil?
+      Cart.find(session[:cart_id])
     else
-      Order.new
+      Cart.new
     end
   end
 end
