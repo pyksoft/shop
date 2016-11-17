@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :profile
+  has_many :favorites
+  has_many :favorite_products, through: :favorites, source: :favorited, source_type: 'Product'
 
   def has_profile?
     profile.present?

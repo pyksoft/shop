@@ -11,7 +11,9 @@ helper_method :sort_column, :sort_direction
     end
   end
 
-
+  def show
+    @product = Product.find(params[:id])
+  end
 
 private
 

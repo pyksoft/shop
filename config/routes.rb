@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   resources :order_items, only: [:create, :update, :destroy]
   resources :charges
   resources :orders
+  resources :favorite_products, only: [:create, :destroy, :index]
 
   root to: "products#index"
 

@@ -1,0 +1,44 @@
+
+<table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+          <th class="text-left"><%= "name" %></th>
+          <th class="text-left"><%= "price" %></th>
+          <th class="text-left">
+              <strong>photo:</strong>
+          </th>
+          <th class="text-left">
+              <strong>Add to wishlist:</strong>
+          </th>
+
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td><%= @product.name %>
+          </td>
+          <td>
+              <%= @product.price %>
+          </td>
+          <% @product.photos.each do |photo| %>
+          <td><%= image_tag photo.image %>
+          </td>
+          <td><%- unless current_user.favorite_products.exists?(id: @product.id) -%>
+            <%= link_to 'Add to favorites', favorite_products_path(product_id: @product), method: :post %>
+            <%- else -%>
+            <%= link_to 'Remove from favorites', favorite_product_path(@product), method: :delete %>
+            <%- end -%>
+          </td>
+
+
+      </tr>
+
+
+        <% end %>
+    </tbody>
+</table>
+
+<div class="inline-btn">
+    <div class="back-button">
+        <%= link_to "Back", root_path, class: "btn btn-default" %>
+    </div>
