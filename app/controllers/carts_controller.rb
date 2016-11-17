@@ -24,4 +24,21 @@ before_action :authenticate_user!, except: [:show]
     # redirect to shopping cart or whereever
   end
 
+
+  def subtotal
+    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price.to_f) : 0 }.sum
+  end
+
+  def shipping
+    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price * 0.15).round(2) : 0 }.sum
+  end
+
+  def tax
+    (subtotal * 0.21).round(2)
+  end
+
+  def total
+    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price * 1.15 * 1.21).round(0) : 0 }.sum
+  end
+
 end

@@ -3,7 +3,7 @@ class Cart < ApplicationRecord
   before_save :update_subtotal, :update_tax, :update_shipping, :update_total
 
   def subtotal
-    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price.to_f) : 0 }.sum
+    ::order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price.to_f) : 0 }.sum
   end
 
   def shipping
@@ -27,7 +27,6 @@ class Cart < ApplicationRecord
     end
   end
 
-  private
   def set_order_status
     self.order_status_id = 1
   end
