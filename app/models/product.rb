@@ -2,6 +2,7 @@ class Product < ApplicationRecord
 has_many :photos
 has_many :order_items
 
+
   def self.search(search)
     if search
       where('name ILIKE :search', search: "%#{search}%")
