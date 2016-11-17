@@ -3,8 +3,12 @@ class OrderItemsController < ApplicationController
   def create
     @cart = current_cart
     @order_item = @cart.order_items.new(order_item_params)
-    @cart.save
-    session[:cart_id] = @cart.id
+    if @cart.save
+      session[:cart_id] = @cart.id
+      flash[:notice] = "Item added to the cart successfully"
+    else
+      render page, flash[:message] = "Cart couldn't be created"
+    end
   end
 
   def update
