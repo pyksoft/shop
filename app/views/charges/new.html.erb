@@ -31,19 +31,25 @@
                 <td class="thick-line"></td>
                 <td class="thick-line"></td>
                 <td class="thick-line text-left">Subtotal</td>
-                <td class="thick-line text-right"><%="#{number_to_currency current_order.subtotal}" %>    </td>
+                <td class="thick-line text-right"><%="#{number_to_currency current_cart.subtotal}" %>    </td>
               </tr>
               <tr>
                 <td class="no-line"></td>
                 <td class="no-line"></td>
                 <td class="no-line text-left">Shipping</td>
-                <td class="no-line text-right"><%="#{number_to_currency current_order.subtotal * 0.15 }" %></td>
+                <td class="no-line text-right"><%="#{number_to_currency current_cart.shipping }" %></td>
               </tr>
+                <tr>
+                  <td class="no-line"></td>
+                  <td class="no-line"></td>
+                  <td class="no-line text-left">Tax</td>
+                  <td class="no-line text-right"><%="#{number_to_currency current_cart.tax }" %></td>
+                </tr>
               <tr>
                 <td class="no-line"></td>
                 <td class="no-line"></td>
                 <td class="no-line text-left"><strong>Total</strong></td>
-                <td class="no-line text-right"><%="#{number_to_currency current_order.subtotal * 1.15}" %></td>
+                <td class="no-line text-right"><%="#{number_to_currency current_cart.total }" %></td>
               </tr>
               </tbody>
             </table>
@@ -361,5 +367,30 @@
 <BR>
 <BR>
 
-(??)<% end %>
+<div class="paybutton">
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+
+    <form action="/your-server-side-code" method="POST">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_AWVRdlM1LHBiV2UOyLT0bFyA"
+        data-amount="<%= current_cart.total * 100 %>"
+        data-name="Australianproducts"
+        data-description="2 widgets"
+        data-image="http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479297450/flag-round-250_uodave.png"
+        data-locale="auto"
+        data-zip-code="true"
+        data-currency="eur">
+      </script>
+    </form>
+  </div>
+
+  <% end %>
 </div>

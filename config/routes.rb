@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :products
   resources :photos
   resources :profiles, only: [:new, :edit, :create, :update]
-  resource :cart, only: [:show]
+  resources :carts
   resources :order_items, only: [:create, :update, :destroy]
   resources :charges
   resources :orders

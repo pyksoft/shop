@@ -1,12 +1,12 @@
 class ChargesController < ApplicationController
 
   def new
-    @order_items = current_order.order_items
+    @order_items = current_cart.order_items
     render layout: 'application'
   end
 
   def create
-    @amount = (current_order.total * 100).to_i
+    @amount = (current_cart.total * 100).to_i
     # Amount in cents
 
     customer = Stripe::Customer.create(

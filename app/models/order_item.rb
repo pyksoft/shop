@@ -1,10 +1,10 @@
 class OrderItem < ApplicationRecord
   belongs_to :product
-  belongs_to :order
+  belongs_to :cart
 
   validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validate :product_present
-  validate :order_present
+  validate :cart_present
 
   before_save :finalize
 
@@ -27,9 +27,9 @@ private
     end
   end
 
-  def order_present
-    if order.nil?
-      errors.add(:order, "is not a valid order.")
+  def cart_present
+    if cart.nil?
+      errors.add(:order, "is not a valid.")
     end
   end
 
