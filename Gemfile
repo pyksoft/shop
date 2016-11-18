@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 ruby '2.2.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -67,3 +66,4 @@ gem 'rails_12factor', group: :production
 gem 'jquery-turbolinks'
 gem "capybara"
 gem 'selenium-webdriver', '~> 2.53'
+gem 'thin'
