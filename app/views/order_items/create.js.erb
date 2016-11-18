@@ -1,6 +1,4 @@
 <% if @cart.errors.any? || @order_item.errors.any? %>
-console.log(1)
-console.error(message)
   alert("not valide.");
 <% else %>
   $(".cart-text").html("<%= escape_javascript(render 'layouts/cart_text') %>");

@@ -1,5 +1,7 @@
 class FavoriteProductsController < ApplicationController
 before_action :set_product, only: [:create, :destroy]
+before_action :authenticate_user!, except: [:show]
+
 
   def index
     @products = current_user.favorite_products

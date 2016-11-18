@@ -1,5 +1,4 @@
 class CartsController < ApplicationController
-before_action :authenticate_user!, except: [:show]
 
   def show
     @order_items = current_cart.order_items

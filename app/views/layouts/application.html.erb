@@ -2,10 +2,10 @@
 <html>
   <head>
     <title>Australianstore</title>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= tag :meta, :name => "stripe-key", :content => ENV["pk_test_AWVRdlM1LHBiV2UOyLT0bFyA"] %>
     <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
@@ -18,12 +18,13 @@
 
   <script>
     // A $( document ).ready() block.
-    $( document ).ready(function() {
-      $( '.trigger' ).click(function() {
-        $( ".highlight" ).toggle( "highlight" );
+    $(window).load(function() {
+      $( ".trigger").click(function() {
+        $(".highlight" ).toggle( "highlight");
       });
     });
   </script>
+
 
 </body>
 </html>
