@@ -15,7 +15,7 @@ before_action :set_product, only: [:create, :destroy]
 
   def destroy
     Favorite.where(favorited_id: @product.id, user_id: current_user.id).first.destroy
-    redirect_to @product, notice: 'Artist is no longer in favorites'
+    redirect_to @product, notice: 'Product is no longer in favorites'
   end
 
   private

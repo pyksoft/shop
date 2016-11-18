@@ -1,13 +1,13 @@
 class OrdersController < ApplicationController
 helper_method :sort_column, :sort_direction
-before_validation :set_order_status
+
 
   def index
     @orders = Order.all
   end
 
   def set_order_status
-    self.order_status_id = 1
+    order.update_attribute(:order_status_id = 1)
   end
 
   def update_subtotal

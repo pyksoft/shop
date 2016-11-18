@@ -1,7 +1,7 @@
 class Cart < ApplicationRecord
   has_many :order_items
   before_save :update_subtotal, :update_tax, :update_shipping, :update_total
-  
+
 
   def subtotal
     order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price.to_f) : 0 }.sum
@@ -16,7 +16,7 @@ class Cart < ApplicationRecord
   end
 
   def total
-    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price * 1.15 * 1.21).round(0) : 0 }.sum
+    order_items.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.unit_price * 1.15 * 1.21).round(2) : 0 }.sum
   end
 
 

@@ -2,7 +2,7 @@ img  {
   width: 200px;
 }
 
-.table-bordered {
+.table .table-bordered .table-striped {
   width: 700px;
   align-items: center;
 
@@ -47,8 +47,42 @@ img  {
 
 #wishlist {
   margin: 0px 0 0 250px;
+  width: 700px;
 }
 
 #ordershow {
   margin: 0px 0 0 250px;
+  width: 700px;
 }
+
+// .panel-heading {
+//   width: 650px;
+//   align-items: center;
+// }
+//
+// .panel-primary {
+//   width: 650px;
+//   align-items: center;
+//   margin: 0px 0 0 350px;
+// }
+//
+// .panel-body {
+//   width: 700px;
+//   align-items: center;
+// }
+//
+//
+// .profilepage {
+//   width: 700px;
+//   align-items: center;
+// }
+//
+// .form-group {
+//   width: 700px;
+//   align-items: center;
+// }
+//
+// .actions {
+//   width: 700px;
+//   align-items: center;
+// }

@@ -24,9 +24,9 @@
           <td><%= image_tag photo.image %>
           </td>
           <td><%- unless current_user.favorite_products.exists?(id: @product.id) -%>
-            <%= link_to 'Add to favorites', favorite_products_path(product_id: @product), method: :post %>
+            <%= link_to 'Add to wishlist', favorite_products_path(product_id: @product), method: :post %>
             <%- else -%>
-            <%= link_to 'Remove from favorites', favorite_product_path(@product), method: :delete %>
+            <%= link_to 'Remove from wishlist', favorite_product_path(@product), method: :delete %>
             <%- end -%>
           </td>
 

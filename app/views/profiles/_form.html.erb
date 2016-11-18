@@ -1,3 +1,4 @@
+<div class="profilepage">
 <%= form_for @profile do |f| %>
     <% @profile.errors.full_messages.each do |msg| %>
         <p class="alert alert-danger"><%= msg %></p>
@@ -51,3 +52,4 @@
       <%= link_to "Back", root_path, class: "btn btn-default" %>
     </div>
 <% end %>
+</div>

@@ -1,5 +1,6 @@
 class ChargesController < ApplicationController
 
+
   def new
     @order_items = current_cart.order_items
     render layout: 'application'
@@ -7,6 +8,7 @@ class ChargesController < ApplicationController
 
   def create
     @order = Order.new(params[:order])
+    assign_order_attributes
 
     if @order.save
 
@@ -35,7 +37,12 @@ class ChargesController < ApplicationController
 private
 
   def order_params
-    params.require(:order).permit(:title, :subtotal, :tax, :shipping, :total)
+    params.require(:order).permit(:title, :subtotal, :tax, :shipping, :total, :order_status)
+  end
+
+  def assign_order_attributes
+    @order.assign_attributes(:order_status_id => 1, :subtotal => current_cart.subtotal,
+    :tax => current_cart.tax, :shipping => current_cart.shipping, :total => current_cart.total )
   end
 
 end

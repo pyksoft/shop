@@ -12,6 +12,10 @@
           <th class="text-left">
               <strong>Add to cart:</strong>
           </th>
+          <!-- <th class="text-left">
+              <strong>Add to wishlist:</strong>
+          </th> -->
+
 
         </tr>
     </thead>
@@ -30,6 +34,13 @@
           <td><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
             <%= f.hidden_field :product_id, value: product.id %>
           <td><%= f.submit "Add to Cart", class: "btn btn-primary" %></td>
+
+          <!-- <td><%- unless current_user.favorite_products.exists?(product.id) -%>
+            <%= link_to 'Add to wishlist', favorite_products_path(@product_id), method: :post %>
+            <%- else -%>
+            <%= link_to 'Remove from wishlist', favorite_product_path(product.id), method: :delete %>
+            <%- end -%>
+          </td> -->
 
   </td>
       </tr>
