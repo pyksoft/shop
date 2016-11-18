@@ -1,7 +1,7 @@
 
 <h1 class="homepageheader">Wishlist</h1>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped", id="wishlist">
   <thead>
       <tr>
           <th class="text-left"><%= "name" %></th>
@@ -23,11 +23,8 @@
           <% product.photos.each do |photo| %>
           <td><%= image_tag photo.image %>
           </td>
-
-
   <td>
-    <%= link_to 'Remove from favorites', favorite_product_path(product.id), method: :delete %>
-
+    <%= link_to 'Remove from wishlist', favorite_product_path(product.id), method: :delete %>
   </td>
       </tr>
         <% end %>
