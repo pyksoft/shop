@@ -1,24 +1,27 @@
-# README
+# Australian store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I created this project for my final assignment at Codaisseurs immersive training program.
+The project combines and online shopping store with stripe checkout and payment.
 
-Things you may want to cover:
+## Basic useful feature list:
 
-* Ruby version
 
-* System dependencies
+ * Adding items to a shopping cart via AJAX
+ * Adding items to a wish list for later reference
+ * Creating a profile for return visits
+ * Checking out and order confirmation
+ * Payment checkout via Stripe
+ * You can test the payment with fake creditcardnumber 4242 4242 4242 4242,
+	any random CVS, expiry date and postal code
+ * File contents are saved in the URL so you can share files
 
-* Configuration
+### How to make it work
+To use this project
 
-* Database creation
+1. clone it
+2. run the migrations and seed the database
+3. start the rails server.
 
-* Database initialization
+A hosted version of this project can also be found at https://australianshop.herokuapp.com/
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt tag](http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479655667/Homepage_Australianstore_psckmh.png )
