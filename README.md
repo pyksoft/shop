@@ -11,10 +11,9 @@ The project combines and online shopping store with stripe checkout and payment.
  * Creating a profile for return visits
  * Checking out and order confirmation
  * Payment checkout via Stripe
- * Gems included: Rspec/Capybarra/selenium/byebug/factory girl/faker/bootstrap/devise/Stripe/JQuery turbo links
+ * Gems included: Rspec/Capybarra/selenium/byebug/factorygirl/faker/bootstrap/devise/Stripe/JQueryturbolinks
  * You can test the Stripe integration with fake creditcardnumber 4242 4242 4242 4242,
 	any random CVS, expiry date and postal code
-
 
 
 ## How to make it work
