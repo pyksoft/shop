@@ -1,6 +1,6 @@
 # Australian store
 
-I created this project for my final assignment at Codaisseurs immersive training program.
+I created this project for my final assignment at Codaisseur's immersive training program.
 The project combines and online shopping store with stripe checkout and payment.
 
 ## Basic useful feature list:
@@ -11,9 +11,11 @@ The project combines and online shopping store with stripe checkout and payment.
  * Creating a profile for return visits
  * Checking out and order confirmation
  * Payment checkout via Stripe
- * You can test the payment with fake creditcardnumber 4242 4242 4242 4242,
+ * Gems included: Rspec/Capybarra/selenium/byebug/factory girl/faker/bootstrap/devise/Stripe/JQuery turbo links
+ * You can test the Stripe integration with fake creditcardnumber 4242 4242 4242 4242,
 	any random CVS, expiry date and postal code
- * File contents are saved in the URL so you can share files
+
+
 
 ## How to make it work
 To use this project
@@ -32,3 +34,5 @@ A hosted version of this project can also be found at https://australianshop.her
 
  * [Stripe Rails](https://stripe.com/docs/checkout/rails) for integrating Stripe with Rails
  * [Rich on Rails](https://richonrails.com/articles/building-a-shopping-cart-in-ruby-on-rails?comments_page=1) for integrating the Shopping Cart feature
+ 
+
