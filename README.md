@@ -15,7 +15,7 @@ The project combines and online shopping store with stripe checkout and payment.
 	any random CVS, expiry date and postal code
  * File contents are saved in the URL so you can share files
 
-### How to make it work
+## How to make it work
 To use this project
 
 1. clone it
@@ -25,3 +25,10 @@ To use this project
 A hosted version of this project can also be found at https://australianshop.herokuapp.com/
 
 ![alt tag](http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479655667/Homepage_Australianstore_psckmh.png )
+
+
+
+## Resources used to make this:
+
+ * [Stripe Rails](https://stripe.com/docs/checkout/rails) for integrating Stripe with Rails
+ * [Rich on Rails](https://richonrails.com/articles/building-a-shopping-cart-in-ruby-on-rails?comments_page=1) for integrating the Shopping Cart feature
