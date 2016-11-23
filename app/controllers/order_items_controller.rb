@@ -7,7 +7,7 @@ class OrderItemsController < ApplicationController
       session[:cart_id] = @cart.id
       flash[:notice] = "Item added to the cart successfully"
     else
-      render page, flash[:message] = "Cart couldn't be created"
+      render products_path, flash[:message] = "Cart couldn't be created"
     end
   end
 

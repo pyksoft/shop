@@ -7,14 +7,15 @@
     <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
-    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
     <br>
     <br>
-    <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+    <br>
+    <br>
+
     <br>
     <%= yield %>
     <p class="notice"><%= notice %></p>

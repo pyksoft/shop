@@ -10,6 +10,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
       <ul class="nav navbar-nav navbar-right", id="navitemsright">
         <li class="wishlist"><a href="/favorite_products">Wishlist</a></li>
+        <li class="cartnavbar"><%= link_to cart_path(:id), class: "cartbutton" do %>
+            <i class="glyphicon glyphicon-shopping-cart"></i></li>
+        <% end %>
 				<% if !user_signed_in? %>
 					<li><%= link_to "Log In", new_user_session_path %></li>
 					<li><%= link_to "Sign Up", new_user_registration_path %></li>

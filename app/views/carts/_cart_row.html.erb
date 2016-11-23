@@ -1,6 +1,3 @@
-
-<br>
-
   <table class="table table-bordered table-striped", id="carttable">
     <thead>
         <tr>
@@ -13,11 +10,12 @@
       </thead>
       <tbody>
       <% @order_items.each do |order_item| %>
-      <%= form_for order_item, remote: true do |f| %>
         <tr>
             <td><%= order_item.product.name %></td>
             <td><%= order_item.product.price %></td>
-            <td><%= f.number_field :quantity, value: 1, min: 1 %></td>
+            <%= form_for order_item, remote: true do |f| %>
+            <td><%= f.number_field :quantity, value: order_item.quantity.to_i, class: "form-control", min: 1 %></td>
+            <%= f.hidden_field :product_id, value: order_item.product.id %>
             <td><%= f.submit "Update Quantity", class: "btn btn-primary" %></td>
             <td><%= link_to "Delete", order_item,
               { data: { confirm: "Are you sure you wish to delete the product '#{order_item.product.name}' from your cart?" },

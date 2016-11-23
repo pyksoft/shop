@@ -1,6 +1,10 @@
-<div class="text-center">
+
+<h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+
+<!-- <div class="text-center">
   <h4><%="Subtotal: #{number_to_currency current_cart.subtotal}" %></h4>
-</div>
+</div> -->
+<br>
 
 <div>
   <div class="confirmbutton">
@@ -11,7 +15,7 @@
 </div>
 
 <br>
-<div class="orderitemrow">
+
 <% if !@order_item.nil? && @order_item.errors.any? %>
     <div class="alert alert-danger">
       <ul>
@@ -28,4 +32,3 @@
 <% else %>
         <%= render 'carts/cart_row' %>
 <% end %>
-</div>

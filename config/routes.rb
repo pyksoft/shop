@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :photos
   resources :profiles, only: [:new, :edit, :create, :update]
   resources :carts
-  resources :order_items, only: [:create, :update, :destroy]
+  resources :order_items, only: [:create, :update, :destroy], defaults: { format: 'js' }
   resources :charges
   resources :orders
   resources :favorite_products, only: [:create, :destroy, :index]

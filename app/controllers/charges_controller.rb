@@ -1,6 +1,5 @@
 class ChargesController < ApplicationController
 
-
   def new
     @order_items = current_cart.order_items
     render layout: 'application'

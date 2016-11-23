@@ -1,5 +1,6 @@
 <div class="productoverview">
-  <h1 class="page-title">Overview of products:</h1>
+  <h1 class="confirmpagetitle">Overview of products</h1>
+
   <br>
   <div class="row">
     <div class="col-md-6">
@@ -61,11 +62,13 @@
   </div>
 </div>
 
+<br>
 <form class="form-horizontal">
     <fieldset>
 
+
       <!-- Form Name -->
-      <legend class="text-center">Please enter your Shipping Details</legend>
+      <legend class="confirmpagetitle"><h1>Please enter your Shipping Details</h1><br></legend>
       <BR>
 <div class="shippingform"
       <!-- Full name-->
@@ -380,7 +383,7 @@
 
     <form action="/your-server-side-code" method="POST">
       <script
-        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button", id="stripebutton"
         data-key="pk_test_AWVRdlM1LHBiV2UOyLT0bFyA"
         data-amount="<%= current_cart.total * 100 %>"
         data-name="Australianproducts"

@@ -1,4 +1,13 @@
+<div class="jumbotron">
+  <h1 class="page-title">Australian shop</h1>
+  <p class="paragraph-intro">Welcome to the Australian Shop</p>
+</div>
+<br>
+<h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+  <br>
 <h1 class="homepageheader">Overview of Products</h1>
+<br>
+<br>
 
 <br>
   <div class="searchbar"><%= form_tag products_path, :method => 'get' do %>
@@ -9,7 +18,8 @@
   <% end %>
 </div>
 <br>
-
+<br>
+<br>
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
         <%= render "product_row",  product: @product, order_item: @order_item %>
