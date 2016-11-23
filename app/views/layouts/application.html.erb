@@ -6,11 +6,16 @@
     <%= tag :meta, :name => "stripe-key", :content => ENV["pk_test_AWVRdlM1LHBiV2UOyLT0bFyA"] %>
     <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
+    <br>
+    <br>
     <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+    <br>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
