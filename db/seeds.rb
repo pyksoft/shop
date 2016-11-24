@@ -3,19 +3,19 @@ Product.delete_all
 OrderStatus.delete_all
 
 
-photo1 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479126845/51cc77451754251cc774517925_mcrysr.jpg")
+photo1 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479988443/Coopers_yqavsl.png")
 photo2 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479126845/coopers_pale_ale_bottles_375ml_k4fzfa.png")
-photo3 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479126845/tim-tam_qioicv.jpg")
-photo4 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479136853/KR845166_kraft_ky_kraft_vegemite_jar_400g_n_a_t0qwkk.jpg")
-photo5 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479136853/192985.jpg.ebe601ef27c86feda2ac324db7dc4e7b_uyy34a.jpg")
-photo6 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479136853/Gourmet-Game_Herb-Garlic-Kangaroo-Steak1_ibvzwv.jpg")
+photo3 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479988442/Timtam_mwetsq.png")
+photo4 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479988447/Vegemite_ln2e45.png")
+photo5 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479988445/Milo_vhi8el.png")
+photo6 = Photo.create(image: "http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1479988445/kangaroo_sbipre.png")
 
 product1 = Product.create(name:"Coopers gift set", price: "12.99", photos: [photo1])
 product2 = Product.create(name:"Coopers Pale Ale", price: "4.99", photos: [photo2])
 product3 = Product.create(name:"Tim Tams", price: "5.99", photos: [photo3])
 product4 = Product.create(name:"Vegemite", price: "8.99", photos: [photo4])
 product5 = Product.create(name:"Milo", price: "19.99", photos: [photo5])
-product6 = Product.create(name:"Frozen Kangaroo Steak", price: "21.99", photos: [photo6])
+product6 = Product.create(name:"Kangaroo Steak", price: "21.99", photos: [photo6])
 
 OrderStatus.create! name: "In Progress"
 OrderStatus.create! name: "Placed"
