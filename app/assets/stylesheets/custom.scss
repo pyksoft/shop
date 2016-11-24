@@ -111,9 +111,9 @@ img  {
 
 .searchbutton {
 	background-color: #79C255;
+	width: 80px;
 	border-radius: 6px;
 	color: white;
-	box-shadow: none;
 }
 
 .homepageheader {
@@ -314,7 +314,7 @@ img  {
 	position: relative;
 	flex-grow: 1;
 	border-radius: 6px;
-	box-shadow: 10px 10px 5px #888888;
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.4);
 }
 
 
