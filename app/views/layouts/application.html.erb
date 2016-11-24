@@ -6,7 +6,7 @@
     <%= tag :meta, :name => "stripe-key", :content => ENV["pk_test_AWVRdlM1LHBiV2UOyLT0bFyA"] %>
     <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet" %>
   </head>
 
   <body>
