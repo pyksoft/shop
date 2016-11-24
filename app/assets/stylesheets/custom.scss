@@ -6,7 +6,6 @@ html, body {
 
 body {
 	padding: 0px;
-	background: white;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 11pt;
 	font-weight: 200;
@@ -14,7 +13,13 @@ body {
   height: 0;
   padding-bottom: 56.25%; /* 16:9 */
   position: relative;
+	background-image: url(http://res.cloudinary.com/sebastiaanpoppen/image/upload/o_41/v1479977270/photo-1476128708453-f970dd17c6f0_dr3sgj.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+
 
 h1, h2, h3 {
 	margin: 0;
@@ -95,6 +100,7 @@ img  {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
+	background-color: white;
 }
 
 .searchbar {
@@ -135,6 +141,10 @@ img  {
 #ordershow {
   margin: auto;
   width: 700px;
+}
+
+#carttable {
+	background-color: white;
 }
 
 
@@ -182,15 +192,16 @@ img  {
   margin: 0px 0 0 250px;
   width: 700px;
 	position: relative;
+	background-color: white
 }
 
 .navbar-default {
-  background-color: #FFF;
-  border-color: #FFF;
+	border: none;
   margin-bottom: 0px;
   top: 0; left: 0;
   width: 100%; height: 100%;
   position: absolute;
+	background: none;
 
 .navbar-brand {
    color: #79C255;
@@ -228,7 +239,7 @@ img  {
 }
 
 #dropdown {
-    background-color: #fff;
+    background: none;
     color:#ffffff;
     top: 1em;
     right: 3em
