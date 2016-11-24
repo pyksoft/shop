@@ -106,6 +106,14 @@ img  {
 
 .searchbar {
   text-align: center;
+	background-color: white
+}
+
+.searchbutton {
+	background-color: #79C255;
+	border-radius: 6px;
+	color: white;
+	box-shadow: none;
 }
 
 .homepageheader {
@@ -306,6 +314,7 @@ img  {
 	position: relative;
 	flex-grow: 1;
 	border-radius: 6px;
+	box-shadow: 10px 10px 5px #888888;
 }
 
 

@@ -13,7 +13,7 @@
   <div class="searchbar"><%= form_tag products_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search", :name => nil, class:"searchbutton" %>
   </p>
   <% end %>
 </div>
