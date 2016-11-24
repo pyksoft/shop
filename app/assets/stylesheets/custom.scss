@@ -65,7 +65,8 @@ a:hover {
 
 
 img  {
-  width: 200px;
+  max-width: 200px;
+	max-height: 200px
 }
 
 // homepage
@@ -200,7 +201,7 @@ img  {
   margin-bottom: 0px;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  position: absolute;
+  position: relative;
 	background: none;
 
 .navbar-brand {
@@ -245,7 +246,7 @@ img  {
   }
 
 #navitemsright .nav .navbar-nav .navbar-right {
-  right: 5em
+  right: 5em;
 }
 }
 
@@ -281,4 +282,71 @@ img  {
 		position: relative;
 	  top: 0; left: 0;
 	  width: 100%; height: 100%;
+}
+
+
+.flex-container {
+  list-style: none;
+  width: 100%;
+  flex-flow: row wrap;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex-item {
+  background: #F5F5F5;
+  padding: 5px;
+  width: 500px;
+  height: 250px;
+  margin-top: 30px;
+	display: flex;
+  color: black;
+  font-size: 1em;
+	position: relative;
+	flex-grow: 1;
+	border-radius: 6px;
+}
+
+
+.flexphoto {
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+	height: 100%;
+	width: 40%;
+	margin-left: 25px;
+
+	img {
+		  max-width: 200px;
+			max-height: 200px
+	}
+}
+
+.flexinfo {
+	height: 100%;
+	width: 60%;
+	margin-left: 125px;
+}
+
+.flextitle {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.flexprice {
+	font-size: 20px;
+
+}
+
+
+.flexquantity {
+	display: inline-block;
+	width: 50px;
+	margin-top: 60px;
+}
+
+.flexcart {
+	display: inline-block;
+	width: 50px;
 }
